@@ -1,0 +1,22 @@
+# ASP.NET Core Web API Assignment Evidence
+
+---
+
+## Part 1 – Web API Evidence
+
+The Web API project exposes data using ASP.NET Core controllers.
+
+### Existing endpoint:
+
+GET /pizza
+
+### Example response:
+
+```json
+[
+  {
+    "id": 1,
+    "name": "Pizza",
+    "isGlutenFree": false
+  }
+]
