@@ -1,0 +1,48 @@
+@ContosoPizza_HostAddress = http://localhost:5236
+
+GET {{ContosoPizza_HostAddress}}/openapi/v1.json
+Accept: application/json
+
+###
+
+GET {{ContosoPizza_HostAddress}}/weatherforecast/
+Accept: application/json
+
+
+// Pizza HTTP
+### GET all pizzas
+Expected Status: 200 OK
+GET {{ContosoPizza_HostAddress}}/pizza/
+Accept: application/json
+
+
+####
+GET {{ContosoPizza_HostAddress}}/pizza/1
+Accept: application/json
+
+### Create pizza
+# Expected Status: 201 Created
+POST {{ContosoPizza_HostAddress}}/pizza/
+Content-Type: application/json
+
+{
+    "name": "Tecno",
+    "isGlutenFree": true
+}
+
+### Update pizza
+# Expected Status: 204 No Content
+PUT {{ContosoPizza_HostAddress}}/pizza/3
+Content-Type: application/json
+
+{
+    "id": 3,
+    "name": "Hawaiian",
+    "isGlutenFree": false
+}
+
+### Delete pizza
+# Expected Status: 204 No Content
+DELETE {{ContosoPizza_HostAddress}}/pizza/3
+
+###
