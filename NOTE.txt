@@ -1,22 +1,32 @@
-# ASP.NET Core Web API Assignment Evidence
+# Assignment Notes
+
+## Part 1 – ASP.NET Core Web API Evidence
+
+This project is built using ASP.NET Core Web API and includes a service layer for managing pizza data.
+
+The existing controller uses the PizzaService class to perform CRUD operations.
+
+### Existing Data (Pizza records)
+
+The service contains a list of pizzas:
+
+- Classic Italian
+- Veggie
+- Pepperoni Feast
+
+### Evidence of Model and Service Layer
+
+The application uses the following structure:
+
+- Model: Pizza.cs
+- Service: PizzaService.cs
+- Controller: PizzaController.cs
 
 ---
 
-## Part 1 – Web API Evidence
+## Added Record (Evidence of Modification)
 
-The Web API project exposes data using ASP.NET Core controllers.
+An additional pizza record was included in the service:
 
-### Existing endpoint:
-
-GET /pizza
-
-### Example response:
-
-```json
-[
-  {
-    "id": 1,
-    "name": "Pizza",
-    "isGlutenFree": false
-  }
-]
+```csharp
+new Pizza { Id = 3, Name = "Pepperoni Feast", IsGlutenFree = false }
